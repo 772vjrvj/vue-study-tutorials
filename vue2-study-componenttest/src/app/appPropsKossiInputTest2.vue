@@ -2,7 +2,7 @@
   <div>
     <h1>This is Home page</h1>
     <form action="">
-      <InputField3 v-model="name"/>
+      <InputField2 :name="name" @update-name="name = $event.target.value"/>
       <br><button>Submit</button>
       {{ name }}
     </form>
@@ -10,10 +10,10 @@
 </template>
 
 <script>
-import InputField3 from '@/components/emit/kossieCoder/InputField3'
+import InputField2 from '@/components/emit/kossieCoder/InputField2'
 export default {
   components: { 
-    InputField3 
+    InputField2 
   },
   data(){
     return {

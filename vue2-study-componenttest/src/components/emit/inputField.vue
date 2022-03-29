@@ -18,7 +18,7 @@ export default {
   },
   methods : {
     titleUpdate(e) {
-      this.$emit('titleFromChild', e.target.value)
+      this.$emit('titleFromChild', e.target.value);
     }
   }
 

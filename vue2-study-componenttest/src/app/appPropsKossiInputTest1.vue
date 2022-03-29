@@ -2,7 +2,7 @@
   <div>
     <h1>This is Home page</h1>
     <form action="">
-      <InputField3 v-model="name"/>
+      <InputField1 :name="name" @update-name="updateName"/>
       <br><button>Submit</button>
       {{ name }}
     </form>
@@ -10,10 +10,10 @@
 </template>
 
 <script>
-import InputField3 from '@/components/emit/kossieCoder/InputField3'
+import InputField1 from '@/components/emit/kossieCoder/InputField1'
 export default {
   components: { 
-    InputField3 
+    InputField1 
   },
   data(){
     return {
@@ -21,9 +21,9 @@ export default {
     }
   },
   methods: {
-    // updateName(name) {
-    //   this.name = name;
-    // }
+    updateName(name) {
+      this.name = name;
+    }
   }
 }
 </script>

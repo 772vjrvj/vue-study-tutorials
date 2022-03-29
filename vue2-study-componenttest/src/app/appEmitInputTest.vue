@@ -1,12 +1,12 @@
 <template>
   <div>
     <h1>Welcome to Home</h1>
-    <inputField :title = "title" @titleFromChild="titleChange"/>    
+    <InputField :title = "title" @titleFromChild="titleChange"/>    
     {{ title }}
   </div>  
 </template>
 <script>
-import inputField from '@/components/emit/inputField';
+import InputField from '@/components/emit/InputField';
  
 export default {
   data() {
@@ -15,7 +15,7 @@ export default {
     }
   },
   components : {
-    inputField
+    InputField
   },
   methods: {
     titleChange(title) {
