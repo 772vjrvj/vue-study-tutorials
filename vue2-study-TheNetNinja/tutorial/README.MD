@@ -96,3 +96,37 @@ VueJS2Tutorial32-HTTPRequests
 > npm install vue-resource
 https://github.com/pagekit/vue-resource
 http://jsonplaceholder.typicode.com/
+
+
+Vue JS 2 Tutorial #33 - GET Requests
+VueJS2Tutorial33-GETRequests
+
+
+Vue JS 2 Tutorial #34 - Custom Directives
+VueJS2Tutorial34-CustomDirectives
+
+
+Vue JS 2 Tutorial #35 - Filters
+VueJS2Tutorial35-Filters
+
+
+Vue JS 2 Tutorial #36 - Custom Search Filter
+VueJS2Tutorial36-CustomSearchFilter
+
+
+Vue JS 2 Tutorial #37 - Registering Things Locally
+VueJS2Tutorial37-RegisteringThingsLocally
+
+
+Vue JS 2 Tutorial #38 - Mixins
+VueJS2Tutorial38-Mixins
+
+
+Vue JS 2 Tutorial #39 - Setting up Routing
+VueJS2Tutorial39-SettingUpRouting
+>npm install vue-router@2.5.2 --save
+
+
+
+Vue JS 2 Tutorial #40 - Hash vs History (Routing)
+VueJS2Tutorial40-HashVSHistory(Routing)

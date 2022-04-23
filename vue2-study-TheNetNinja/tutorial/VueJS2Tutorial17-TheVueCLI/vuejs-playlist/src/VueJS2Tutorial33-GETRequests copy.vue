@@ -1,18 +1,16 @@
 <template>
     <div>
-        <router-view></router-view>
+        <show-blogs></show-blogs>
     </div>
 </template>
 
 <script>
 // Imports
-import showBlogs from './components39/showBlogs.vue';
-import listBlogs from './components39/listBlogs.vue';
+import showBlogs from './components33/showBlogs.vue';
 
 export default {
     components: {
-        'show-blogs': showBlogs,
-        'list-blogs': listBlogs
+        'show-blogs': showBlogs
     },
     data () {
         return {
