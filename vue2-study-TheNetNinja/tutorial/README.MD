@@ -127,6 +127,13 @@ VueJS2Tutorial39-SettingUpRouting
 >npm install vue-router@2.5.2 --save
 
 
-
 Vue JS 2 Tutorial #40 - Hash vs History (Routing)
 VueJS2Tutorial40-HashVSHistory(Routing)
+
+
+Vue JS 2 Tutorial #41 - Adding Router Links
+VueJS2Tutorial41-AddingRouterLinks
+
+
+Vue JS 2 Tutorial #42 - Route Parameters
+VueJS2Tutorial42-RouteParameters

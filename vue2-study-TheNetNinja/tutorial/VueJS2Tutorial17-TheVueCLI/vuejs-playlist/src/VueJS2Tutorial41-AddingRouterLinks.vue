@@ -1,18 +1,19 @@
 <template>
     <div>
+        <app-header></app-header>
         <router-view></router-view>
     </div>
 </template>
 
 <script>
 // Imports
-import showBlogs from './components39/showBlogs.vue';
-import listBlogs from './components39/listBlogs.vue';
+import showBlogs from './components41/showBlogs.vue';
+import listBlogs from './components41/listBlogs.vue';
+import header from './components41/header.vue';
 
 export default {
     components: {
-        'show-blogs': showBlogs,
-        'list-blogs': listBlogs
+        'app-header': header
     },
     data () {
         return {

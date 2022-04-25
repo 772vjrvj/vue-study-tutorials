@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueResource from 'vue-resource'
 import VueRouter from 'vue-router'
 import App from './App.vue'
-import Routes from './routes42'
+import Routes from './routes41'
 
 // Use packages
 Vue.use(VueResource);
