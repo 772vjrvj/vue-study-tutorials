@@ -137,3 +137,7 @@ VueJS2Tutorial41-AddingRouterLinks
 
 Vue JS 2 Tutorial #42 - Route Parameters
 VueJS2Tutorial42-RouteParameters
+
+
+Vue JS 2 Tutorial #44 - Retrieving Posts from Firebase
+VueJS2Tutorial44-RetrievingPostsfromFirebase
