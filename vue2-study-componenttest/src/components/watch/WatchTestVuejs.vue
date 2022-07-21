@@ -19,8 +19,9 @@ export default {
   },
   watch: {
     // 질문이 변경될 때 마다 이 기능이 실행됩니다.
-    question: function () {
-      console.log('this ? :', this );
+    question: function (newVal, oldVal) {
+      console.log('newVal ? :', newVal );
+      console.log('oldVal ? :', oldVal );
       this.answer = '입력을 기다리는 중...'
       this.debouncedGetAnswer()
     }

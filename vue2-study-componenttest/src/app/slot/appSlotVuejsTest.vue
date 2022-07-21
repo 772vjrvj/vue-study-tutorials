@@ -47,6 +47,7 @@
       </template>
     </slotScopeBasicArrayTest>
 
+
     <slotScopeBasicArrayTest :items="items">
       <template v-slot:menu-item="{item}">
         <div>
