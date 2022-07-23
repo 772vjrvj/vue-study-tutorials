@@ -61,10 +61,10 @@
 </template>
 
 <script>
-import slotButtonVuejsTest from '@/components/slot/slotButtonVuejsTest';
-import slotContentsVuejsTest from '@/components/slot/slotContentsVuejsTest';
-import slotScopeVuejsTest from '@/components/slot/slotScopeVuejsTest';
-import slotScopeBasicArrayTest from '@/components/slot/slotScopeBasicArrayTest';
+import slotButtonVuejsTest from '@/components/slot/slot/slotButtonVuejsTest';
+import slotContentsVuejsTest from '@/components/slot/slot/slotContentsVuejsTest';
+import slotScopeVuejsTest from '@/components/slot/slot/slotScopeVuejsTest';
+import slotScopeBasicArrayTest from '@/components/slot/slot/slotScopeBasicArrayTest';
 
 export default {
   data() {

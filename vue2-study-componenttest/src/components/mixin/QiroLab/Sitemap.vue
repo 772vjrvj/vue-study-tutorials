@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import productmixin from "../QiroLab/productmixin";
+import productmixin from "./productmixin";
 
 export default {
   data(){
