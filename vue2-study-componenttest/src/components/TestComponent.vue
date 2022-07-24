@@ -1,13 +1,15 @@
 <template>
   <div id="app">
-    <TestUnit></TestUnit>
+    <TestUnit />
   </div>
 </template>
 
 <script>
 
-import testUnit from './lifeCycle/TestUnit'
+// import testUnit from './lifeCycle/TestUnit'
 // import testUnit from './emit/TestUnit'
+// import testUnit from './async/TestUnit'
+import testUnit from './loading/TestUnit'
 
 export default {
   components :{
@@ -18,8 +20,10 @@ export default {
     }
   },
   mounted() {
+
   },
   updated() {
+
   },
   methods: {
 
