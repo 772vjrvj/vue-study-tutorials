@@ -9,7 +9,7 @@
 // import testUnit from './lifeCycle/TestUnit'
 // import testUnit from './emit/TestUnit'
 // import testUnit from './async/TestUnit'
-import testUnit from './loading/TestUnit'
+import testUnit from './table/TestUnit'
 
 export default {
   components :{

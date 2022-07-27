@@ -1,60 +1,60 @@
 <template>
-<div class="container">
+  <div class="container">
 
-  <div class="loading-container" v-if="isLoading">
-    <div class="loading"></div>
-    <div id="loading-text">loading</div>
-  </div>
-
-  <table class="content-table">
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>UserName</th>
-        <th>E-Mail</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr v-for="(user, index) in users" @click="idFn(user.id)" :key="index">
-        <td>{{user.id}}</td>
-        <td>{{user.name}}</td>
-        <td>{{user.username}}</td>
-        <td>{{user.email}}</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <hr>
-
-  <!--blog-section============================================================================-->
-  <section id="blog">
-    <div class="blog-heading">
-    <span>My Recent Posts</span>
-    <h3>My Blog</h3>
+    <div class="loading-container" v-if="isLoading">
+      <div class="loading"></div>
+      <div id="loading-text">loading</div>
     </div>
-    <!--container---------------->
-    <div class="blog-container">
-      <!--box-1------------->
-      <div v-for="(post, index) in posts"  :key="index" class="blog-box">
-        <!--img---->
-        <div class="blog-img">
-          <img alt="blog" src="https://via.placeholder.com/600/92c952">
-        </div>
-        <!--text--->
-        <div class="blog-text">
-          <span>{{post.userId}}</span>
-          <a class="blog-title" @click="commentsFn(post.id)">{{post.title}}</a>
-          <p>{{post.body}}</p>
-          <a >Read More</a>
+
+    <table class="content-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>UserName</th>
+          <th>E-Mail</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="(user, index) in users" @click="idFn(user.id)" :key="index">
+          <td>{{user.id}}</td>
+          <td>{{user.name}}</td>
+          <td>{{user.username}}</td>
+          <td>{{user.email}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr>
+
+    <!--blog-section============================================================================-->
+    <section id="blog">
+      <div class="blog-heading">
+      <span>My Recent Posts</span>
+      <h3>My Blog</h3>
+      </div>
+      <!--container---------------->
+      <div class="blog-container">
+        <!--box-1------------->
+        <div v-for="(post, index) in posts"  :key="index" class="blog-box">
+          <!--img---->
+          <div class="blog-img">
+            <img alt="blog" src="https://via.placeholder.com/600/92c952">
+          </div>
+          <!--text--->
+          <div class="blog-text">
+            <span>{{post.userId}}</span>
+            <a class="blog-title" @click="commentsFn(post.id)">{{post.title}}</a>
+            <p>{{post.body}}</p>
+            <a >Read More</a>
+          </div>
         </div>
       </div>
+    </section>
+
+    <hr>
+
     </div>
-  </section>
-
-  <hr>
-
-  </div>
 </template>
 
 <script>
@@ -75,7 +75,9 @@ export default {
   mounted() {
   },
   updated() {
-    console.timeLog('what time?');
+    const date = new Date();
+    console.log(this.$data);
+    console.log('locale string(ko-kr): ' + date.toLocaleString('ko-kr'));
   },
   methods: {
     async idFn(id) {
@@ -86,6 +88,9 @@ export default {
 
       //await전에 await전에 렌더링이 된다.
       this.posts = [];
+
+      //loading이 너무 빨라서 3초를 임의로 주었다.
+      await new Promise(resolve => setTimeout(() => resolve(0),2000));
 
       //첫번째 아이디에 대한
       const posts = await this.reqPosts(id);
@@ -129,6 +134,7 @@ export default {
   font-weight: bold;
 }
 
+
 .content-table th,
 .content-table td {
   padding: 12px 15px;
@@ -140,6 +146,11 @@ export default {
 
 .content-table tbody tr:nth-of-type(even) {
   background-color: #f3f3f3;
+}
+
+.content-table tbody tr:hover {
+  cursor: pointer;
+  background-color: #dae8d6;
 }
 
 .content-table tbody tr:last-of-type {
