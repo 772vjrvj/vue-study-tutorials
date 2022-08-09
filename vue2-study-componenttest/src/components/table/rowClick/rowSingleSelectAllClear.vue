@@ -14,8 +14,8 @@
           <th>E-Mail</th>
         </tr>
       </thead>
-      <tbody>
-        <tr ref="tr" v-for="(post, index) in posts" @click.stop="idFn(post, index)" :key="index" :class="{'active' : post.active}">
+      <tbody ref="tbody" >
+        <tr v-for="(post, index) in posts" @click.stop="idFn(post, index)" :key="index" :class="{'active' : post.id === activeRow}" :id="post.id">
           <td>{{post.userId}}</td>
           <td>{{post.id}}</td>
           <td>{{post.title}}</td>
@@ -33,6 +33,7 @@ export default {
   data() {
     return {
       posts: [],
+      activeRow : ''
     }
   },
   created() {
@@ -44,26 +45,20 @@ export default {
     console.log('updated');
   },
   methods: {
-    //방법 1
-    idFn(post, index) {
-        this.posts = this.posts.map((p, i) => {
-          p.active = i === index ? !p.active : p.active;
-          return p;
-        }
-      );
-      console.log(this.$refs.tr);
-    },
-
-
-
 
     trClear(){
-      this.posts = this.posts.map(p => {
-            p.active = false;
-            return p;
-          }
-      );
-    }
+      this.activeRow = '';
+    },
+
+    //방법 1
+    // idFn(post, index) {
+    //     this.activeRow = index;
+    // },
+
+    //방법 2
+    idFn(post) {
+      this.activeRow = post.id;
+    },
   }
 }
 </script>

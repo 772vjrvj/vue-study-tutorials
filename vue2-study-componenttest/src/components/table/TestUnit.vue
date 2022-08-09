@@ -2,7 +2,7 @@
   <RowClick />
 </template>
 <script>
-import rowClick from './rowClick/rowClick';
+import rowClick from './rowClick/rowMultiSelectCheckBoxAllClearTest';
 
 export default {
   components: {
